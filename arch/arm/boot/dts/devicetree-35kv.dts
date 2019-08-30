@@ -6,7 +6,7 @@
 	compatible = "xlnx,zynq-7000";
 
 	chosen {
-		bootargs = "console=ttyPS0,115200 maxcpus=1 mem=384M clk_ignore_unused root=/dev/ram rw earlyprintk","root=/dev/nfs rw nfsroot=192.168.1.27:/opt/hzzd/nfs ip=192.168.1.28:192.168.1.27:192.168.1.1:255.255.255.0:iTOP:eth0:off rootfstype=ext4 init=/linuxrc console=ttyPS0,115200";
+		bootargs = "console=ttyPS0,115200 maxcpus=1 mem=384M clk_ignore_unused  rootfstype=jffs2 init=/linuxrc root=/dev/mtdblock6 rw earlyprintk";
 	};
 
 	aliases {
