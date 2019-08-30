@@ -1,0 +1,29 @@
+menuconfig MYDRIVERS
+	bool "mydrivers"
+	help
+	  mydrivers
+
+if MYDRIVERS
+
+config LED_DRV
+	tristate "LED_DRV"
+	help
+	  LED_DRV
+
+
+#config MTD_PARTITIONED_MASTER
+#	bool "Retain master device when partitioned"
+#	default n
+#	depends on MTD
+#	help
+#	  For historical reasons, by default, either a master is present or
+#	  several partitions are present, but not both. The concern was that
+#	  data listed in multiple partitions was dangerous; however, SCSI does
+#	  this and it is frequently useful for applications. This config option
+#	  leaves the master in even if the device is partitioned. It also makes
+#	  the parent of the partition device be the master device, rather than
+#	  what lies behind the master.
+#
+#source "drivers/mtd/ubi/Kconfig"
+
+endif # MYDRIVERS
